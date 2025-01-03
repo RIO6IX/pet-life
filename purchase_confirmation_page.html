@@ -1,0 +1,51 @@
+<!--
+credit:
+ https://stackoverflow.com/questions/3292038/redirect-website-after-specified-amount-of-time 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5;url=my_cart.php">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.jpeg" sizes="16x16" type="image/jpeg">
+    <title>Thank You!!</title>
+
+    <style>
+        body {
+            background-image: url(assets/images/confetti.jpg);
+        }
+
+        .content {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 6rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:goldenrod;
+            text-shadow: 0 5px black;
+        }
+
+        h2{
+            font-size: 2rem;
+            color: brown;
+            background-color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <h1>Thank you for your purchase !!</h1>
+        <h2>You will be taken to the user profile in 5 seconds...</h2>
+    </div>
+</body>
+</html>

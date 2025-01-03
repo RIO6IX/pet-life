@@ -1,0 +1,114 @@
+
+/* Profile section styling */
+.profile-section {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+/* Profile image styling */
+.profile-section img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px; 
+}
+
+/* Form styling */
+.user_form {
+    margin: 10px 0; 
+    padding: 20px;
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    display: flex;
+}
+
+/* Horizontal layout for labels and inputs */
+.form-group {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+/* Label styling */
+label {
+    width: 150px; 
+    text-align: left; 
+}
+
+/* Input field styling */
+.user_form > input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    margin-right: 10px;
+}
+
+
+.C_pwd input[type="password"]{
+    width: 200px;
+}
+
+/* Button styling */
+.user_form > button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #218838;
+}
+/* Centered small input for current password */
+#current_password {
+    width: auto; 
+    text-align: center; 
+    font-size: 12px; 
+    margin: 10px auto;
+}
+
+/* Styles for small buttons */
+#saveProfile,
+#savePassword {
+    display: none;
+}
+
+/* Styles for profile editing */
+input[disabled] {
+    background-color: #e9ecef; 
+}
+
+/* Footer styling */
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    /* Stack elements for smaller screens */
+    #main {
+        margin: 10px; 
+    }
+
+    .profile-section img {
+        width: 100px; 
+        height: 100px; 
+    }
+
+    button {
+        width: 100%; 
+    }
+    .user_form >
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        font-size: 14px; 
+    }
+}

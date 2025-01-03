@@ -1,0 +1,198 @@
+/*
+Run this before running the following queries
+
+ => CREATE database petlife_db
+
+then select the petlife_db and run the queries
+*/
+
+/* User data TABLE */
+
+CREATE TABLE User_Data(
+    user_id int not null auto_increment,
+    first_name varchar(50) not null,
+    last_name varchar(50) not null, 
+    city varchar(100) not null, 
+    street varchar(100) not null,
+    postal_code int not null, 
+    email varchar(100) not null, 
+    password varchar(50) not null,
+    user_image_path varchar(255) not null,
+    purchase_freq int not null,
+    role varchar(50) not null check (role='customer'),
+    
+    CONSTRAINT USER_PK PRIMARY KEY(user_id)
+)auto_increment=1000;
+
+/* User phone numbers TABLE */
+
+CREATE TABLE User_Phone( 
+    user_id int, 
+    phone_num char(10) not null, 
+    CONSTRAINT USER_PHONE_FK FOREIGN KEY(user_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE, 
+    CONSTRAINT USER_PHONE_PK PRIMARY KEY(user_id, phone_num)
+);
+
+/* Pet data TABLE */
+
+CREATE TABLE Pet_Data(
+  pet_id int not null auto_increment,
+  owner_id int,
+  name varchar(50) not null,
+  age int not null, 
+  breed varchar(50) not null,
+  gender char(1) not null check (gender in ('M', 'F')),
+  weight decimal(4, 2) not null,
+  pet_type varchar(20) not null,
+  pet_image_path varchar(255) not null,
+  pet_note varchar(500),
+  
+  CONSTRAINT PET_DATA_FK FOREIGN KEY(owner_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT PET_DATA_PK PRIMARY KEY(pet_id, owner_id)
+   
+);
+
+/* Product data TABLE */
+
+CREATE TABLE Product_Data( 
+    product_id int not null auto_increment, 
+    product_name varchar(200) not null, 
+    product_price decimal(10, 2) not null, 
+    product_rating int not null, 
+    product_type varchar(50) not null, 
+    current_stock int not null, 
+    product_image_path varchar(255) not null,
+
+    CONSTRAINT PRODUCT_DATA_PK PRIMARY KEY(product_id) 
+)auto_increment=100;
+
+/* Service data TABLE */
+
+CREATE TABLE Services(
+    service_id int not null auto_increment,
+    service_rate decimal(10, 2) not null,
+    service_type varchar(255) not null,
+    availability_status char(1) not null check(availability_status='Y' or availability_status='N'),
+
+    CONSTRAINT SERVICES_PK PRIMARY KEY(service_id)
+)auto_increment=500;
+
+/* Employee data TABLE */
+
+CREATE TABLE Employee(
+    emp_id int not null auto_increment,
+    first_name varchar(50) not null,
+    last_name varchar(50) not null, 
+    city varchar(100) not null, 
+    street varchar(100) not null,
+    postal_code int not null, 
+    email varchar(100) not null, 
+    password varchar(255) not null,
+    service_provided varchar(50),
+    role varchar(50) not null check(role in ('admin', 'staff', 'manager')),
+    
+    CONSTRAINT EMP_PK PRIMARY KEY(emp_id)
+)auto_increment=5000;
+
+/* Business metrics TABLE */
+
+CREATE TABLE Metrics(
+  metric_id int not null auto_increment,
+  start_date datetime not null,
+  revenue decimal(10,2) not null,
+  user_traffic int not null,
+  
+  CONSTRAINT METRICS_PK PRIMARY KEY(metric_id)
+);
+
+/* Cart TABLE */
+
+CREATE TABLE Cart(
+  item_id int not null auto_increment,
+  product_id int, 
+  customer_id int,
+  product_amount int,
+  
+  CONSTRAINT CART_FK_PRODUCT_ID FOREIGN KEY(product_id) REFERENCES Product_Data(product_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT CART_FK_USER_ID FOREIGN KEY(customer_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT CART_PK PRIMARY KEY(item_id)
+);
+
+/* User payment information TABLE */
+
+CREATE TABLE Payment_Info(
+  card_id int not null auto_increment, 
+  customer_id int, 
+  customer_name varchar(100) not null,
+  card_number varchar(255) not null,
+  expiry_date char(5) not null, 
+  card_verification_code varchar(255) not null,
+  
+  CONSTRAINT PAYMENT_INFO_FK_USER_ID FOREIGN KEY(customer_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT PAYMENT_INFO_PK PRIMARY KEY(card_id)
+    
+);
+
+/* User inquiry TABLE */
+
+CREATE TABLE Inquiry(
+  inquiry_id int not null auto_increment,
+  customer_id int, 
+  inquiry_date timestamp default current_timestamp,
+  inquiry_type varchar(50) not null,
+  inquiry_description varchar(500) not null,
+  
+  CONSTRAINT INQUIRY_FK_USER_ID	FOREIGN KEY(customer_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT INQUIRY_PK PRIMARY KEY(inquiry_id)
+  
+);
+
+/* Employee phone number TABLE */
+
+CREATE TABLE Employee_Phone( 
+    emp_id int, 
+    phone_num char(10) not null, 
+
+    CONSTRAINT EMPLOYEE_PHONE_FK FOREIGN KEY(emp_id) REFERENCES Employee(emp_id) on DELETE CASCADE on UPDATE CASCADE, 
+    CONSTRAINT EMPLOYEE_PHONE_PK PRIMARY KEY(emp_id, phone_num) 
+);
+
+/* Report data TABLE */
+
+CREATE TABLE Report(
+  report_id int not null auto_increment,
+  report_type varchar(50) not null,
+  report_date timestamp default current_timestamp,
+  metric_id int,
+  manager_id int,
+  
+  CONSTRAINT REPORT_FK_MANAGER_ID FOREIGN KEY(manager_id) REFERENCES Employee(emp_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT REPORT_FK_METRIC_ID FOREIGN KEY(metric_id) REFERENCES Metrics(metric_id) on DELETE CASCADE on UPDATE CASCADE,
+  CONSTRAINT REPORT_PK PRIMARY KEY(report_id)
+  
+);
+
+/* User appointment TABLE */
+
+CREATE TABLE Appointment(
+ appointment_id int not null auto_increment,
+ customer_id int, 
+ pet_id int,
+ service_id int,
+ appointment_date date not null,
+ appointment_time time,
+ checkin_date date,
+ checkout_date date,
+ vet_id int,
+ service_freq varchar(20),
+ postal_code int,
+ hostel_type varchar(50),
+ status varchar(50) not null;
+ 
+ CONSTRAINT APPOINTMENT_FK_USER_ID FOREIGN KEY(customer_id) REFERENCES User_Data(user_id) on DELETE CASCADE on UPDATE CASCADE,
+ CONSTRAINT APPOINTMENT_FK_PET_ID FOREIGN KEY(pet_id) REFERENCES Pet_Data(pet_id) on DELETE CASCADE on UPDATE CASCADE,
+ CONSTRAINT APPOINTMENT_FK_VET_ID FOREIGN KEY(vet_id) REFERENCES Employee(emp_id) on DELETE CASCADE on UPDATE CASCADE,
+ CONSTRAINT APPOINTMENT_FK_SERVICE_ID FOREIGN KEY(service_id) REFERENCES Services(service_id) on DELETE CASCADE on UPDATE CASCADE,
+ CONSTRAINT APPOINTMENT_PK PRIMARY KEY(appointment_id)
+  
+);

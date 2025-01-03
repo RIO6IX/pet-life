@@ -1,0 +1,48 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px auto;
+    min-height: 100vh;
+    margin-top: 100px;
+}
+
+.content {
+    padding: 0 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    background-color: aliceblue;
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+#log-out-btn {
+    width: 150px;
+    padding: 10px 15px;
+    margin-top: 100%;
+    margin-left: 10px;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+}
+
+#log-out-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.504);
+}
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+}
+

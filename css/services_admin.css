@@ -1,0 +1,70 @@
+
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.services,.add-service,.Remove-service{
+    margin-bottom: 20px;
+}
+
+.service-form ul{
+    list-style-type: decimal;
+    margin-bottom: 0%;
+}
+
+.service-form li{
+    background: #e2e2e2;
+    border-radius: 10px;
+    margin-bottom: 0%;
+}
+
+.service-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.service-form > input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.service-form > button{
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #218838;
+}
+#non-click{
+    background-color: tomato;
+    margin-top: 5px;
+}
+
+#non-click:hover{
+    background-color: rgb(186, 138, 138);
+}
+#service-logo{
+    width: 45px;
+    height: 45px;
+    border: 4px #333;
+    position: relative;
+    left: 90%;
+    top: 20%;
+}

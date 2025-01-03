@@ -1,0 +1,94 @@
+.dash-grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.item {
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    background-color: white;
+
+}
+
+.data {
+    display: flex;
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.text > * {
+    margin: 0;
+}
+
+.profile-content {
+    padding: 10px 10px;
+}
+
+.grid-item-1 {
+    height: 300px;
+    width: 300px;
+    margin-left: 200px;
+}
+
+.grid-item-2 {
+    grid-area: 1 / 2 / 3 / 2;
+    margin-right: 100px;
+}
+
+.grid-item-3 {
+    height: 300px;
+    width: 300px;
+    margin-left: 200px;
+}
+
+#revenue-chart {
+    height: 300px;
+    width: 80%;
+    border: 1px solid black;
+    margin: 0 10%;
+}
+
+#bar {
+    height: 200px;
+    width: 50px;
+    border: 1px solid black;
+    margin-left: 20px;
+    display: flex;
+}
+
+#work-progress {
+    height: 10%;
+    width: 50px;
+    background-color: green;
+    align-self: flex-end;
+}
+
+#app-progress {
+    height: 10%;
+    width: 50px;
+    background-color: green;
+    align-self: flex-end;
+}
+
+#gen-report-btn {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #257180;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+#gen-report-btn:hover {
+    cursor: pointer;
+    scale:1.01;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

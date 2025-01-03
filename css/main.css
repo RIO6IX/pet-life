@@ -1,0 +1,166 @@
+
+/*-------- Header ---------*/
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #eae4ddb8;
+    font-family: 'optima', sans-serif;    
+}
+
+.content {
+    height: fit-content;
+    margin-top: 100px;
+}
+
+.profile {
+    margin-left: 300px;
+    margin-top: 100px;
+    padding: 5px 16px;
+    height: 100vh;
+    padding: 20px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#user_profile_picture {
+    border-radius: 50%;
+    margin-right: 150px;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    background-color: #295f98;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hb_menu {
+    margin-top: 20px;
+}
+
+.hb_menu:hover {
+    cursor: pointer;
+}
+
+.hb_menu > div{
+    background-color: black;
+    height: 8px;
+    width: 50px;
+    margin: 5px;
+}
+
+#logo {
+    margin-right: 100px;
+    border-radius: 50%;
+}
+
+.login-signup-btn {
+    height: 50px;
+    width: 80px;
+    margin: 15px 5px 0 0;
+}
+
+.search-btn {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid black;
+}
+
+.search-btn img {
+    width: 30px;
+}
+
+nav form {
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 250px;
+    height: 40px;
+    padding: 0;
+    background-color: white;
+    border: 1px solid black;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav input {
+    width: 840px;
+    height: 40px;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    align-self: center;
+}
+
+/* ---------- Hamburger-Menu ---------*/
+
+/* credit: Treehouse Youtube channel : https://youtu.be/aNDqzlAKmZc*/
+.off-screen-menu {
+    background-color: aliceblue;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    margin-top: 99px;
+    top: 5px;
+    left: -450px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 3rem;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.off-screen-menu li {
+    list-style: none;
+}
+
+.off-screen-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+/* .off-screen-menu a:hover {
+    background-color: aqua;
+} */
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+
+/*--------- Footer ---------*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    background-color: #343a40;
+    height: 200px;
+
+    font-size: 1.5rem;
+    z-index: 900;
+}
+
+footer .logo > *{
+    display: inline;
+}
+
+footer a {
+    text-decoration: none;
+    color:aliceblue;
+}
+

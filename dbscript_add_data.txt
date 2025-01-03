@@ -1,0 +1,128 @@
+/* Insert values to User_Data table */
+
+INSERT  INTO User_Data(first_name, last_name, city, street, postal_code, email, password, user_image_path, purchase_freq, role)
+VALUES
+('Sanuja', 'Rubasinghe', 'Kaduwela', 'first lane', 10100, 'sanuja@gmail.com', 'f68920fc122acc487bc4e4191487d03c', 'saman.jpeg', 0, 'customer'),
+('Chanuka', 'Sampath', 'Homagama', 'second lane', 10200, 'chanuka@gmail.com', 'fc9ea3bf4c1c266412e34948a09801a4', 'chanuka.jpeg', 0, 'customer'),
+('Dinithi', 'Dilshani', 'Kandy', 'third lane', 10300, 'dilshani@gmail.com', '9a011b4a4f64ac17779138796888a2ef', 'dilshani.jpeg', 0, 'customer'),
+('S', 'Menurangi', 'Monaragala', 'fourth lane', 10400, 'menurangi@gmail.com', '887ed9d400305e823f17d05c7f09179e', 'menurangi.jpeg', 0, 'customer'),
+('Javid', 'Mushtan', 'Matara', 'fifth lane', 10500, 'javid@gmail.com', '8dee9814672fe8b4a48d39e4af06a73d', 'javid.jpeg', 0, 'customer');
+
+/* Insert values to User_Phone table */
+
+INSERT INTO User_Phone(user_id, phone_num)
+VALUES
+(1000, '0745863216'),
+(1001, '0720857478'),
+(1002, '0745493394'),
+(1003, '0745345346'),
+(1004, '0744534536');
+
+/* Insert values into Pet_Data table */
+
+INSERT INTO Pet_Data(owner_id, name, age, breed, gender, weight, pet_type, pet_image_path)
+VALUES
+(1000, 'Timmy', 2, 'German Shepherd', 'M', 20.5, 'Dog', 'timmy0.jpeg'),
+(1001, 'Brownie', 3, 'Labrador Retriever', 'F', 30.0, 'Dog', 'brownie1.jpeg'),
+(1002, 'Rose', 6, 'American Longhair', 'F', 4.5, 'Cat', 'rose2.png'),
+(1003, 'Luna', 1, 'Lhasa Apso', 'F', 15.7, 'Dog', 'Luna3.jpeg'),
+(1004, 'King', 5, 'Maine Coon', 'M', 10.5, 'Cat', 'king4.jpeg');
+
+/* Insert values into Product_Data table*/
+
+INSERT INTO Product_Data(product_name, product_price, product_rating, product_type, current_stock)
+VALUES
+('Dog Shampoo', 500.99, 4.7, 'pet_care', 150),
+('Cat Flea Collar', 1000.00, 4.5, 'pharmacy', 100),
+('Bird Cage Cleaner', 500.00, 4.3, 'pet_care', 75),
+('Fish Antibiotic', 1500.75, 4.8, 'pharmacy', 50),
+('Hamster Wheel', 2000.00, 4.6, 'pet_care', 200);
+
+/* Insert values into Services table */
+
+INSERT INTO Services(service_rate, service_type, availability_status)
+VALUES
+(1000, 'groom', 'Y'),
+(100, 'walk', 'Y'),
+(1500, 'hostel', 'Y'),
+(2000, 'vet', 'Y');
+
+/*Insert values into Employee table*/
+
+INSERT INTO Employee(first_name, last_name, city, street, postal_code, email, password, service_provided, role)
+VALUES
+('Saman', 'Kumara', 'Kaduwela', 'first lane', 10100, 'saman@gmail.com', 'f68920fc122acc487bc4e4191487d03c', 'admin', 'admin'),
+('Kamal', 'Sampath', 'Homagama', 'second lane', 10200, 'kamal@gmail.com', 'fc9ea3bf4c1c266412e34948a09801a4', 'groom', 'staff'),
+('Dinithi', 'Weerasekara', 'Kandy', 'third lane', 10300, 'dinithi@gmail.com', '9a011b4a4f64ac17779138796888a2ef', 'walk', 'staff'),
+('Sayumini', 'Pathirana', 'Monaragala', 'fourth lane', 10400, 'sayumini@gmail.com', '887ed9d400305e823f17d05c7f09179e', 'hostel', 'staff'),
+('Ziyad', 'Mohomad', 'Matara', 'fifth lane', 10500, 'ziyad@gmail.com', '8dee9814672fe8b4a48d39e4af06a73d', 'manager', 'manager');
+
+/* Insert values into Metrics table */
+
+INSERT INTO Metrics(start_date, revenue, user_traffic)
+VALUES
+('2024-09-08', 134545.45, 45),
+('2024-09-15', 123435.43, 38),
+('2024-09-22', 123446.65, 40),
+('2024-09-29', 134540.35, 46),
+('2024-10-06', 150050.00, 55);
+
+/* Insert values into Cart table */
+
+INSERT INTO Cart(product_id, customer_id, product_amount)
+VALUES
+(100, 1002, 4),
+(101, 1003, 5),
+(102, 1001, 1),
+(103, 1004, 2),
+(104, 1001, 1);
+
+/* Insert values into Payment_Info table*/
+
+INSERT INTO Payment_Info(customer_id, customer_name, card_number, expiry_date, card_verification_code)
+VALUES
+(1000, 'Sanuja Rubasinghe', 'abeac07d3c28c1bef9e730002c753ed4', '03/25', 'd840cc5d906c3e9c84374c8919d2074e'),
+(1001, 'Chanuka Sampath', 'abeac07d3c28c1bef9e730002c753ed4', '06/25', 'd840cc5d906c3e9ssdfsdfc8919d2074e'),
+(1002, 'Dinithi Dilshani', 'abeac07d3c34534bef9e730002c753ed4', '03/29', 'd840ccwr45r3e9c84374c8919d2074e'),
+(1003, 'S Menurangi', '098fd07d3c28c1bef9e730002c753ed4', '06/30', 'wew345we6c3e9c84374c8919d2074e'),
+(1004, 'Javid Mushtan', 'dfgac07d3c2345f9e730002c753ed4', '05/27', 'd678cc5d906c3e9c84354c8919d2074e');
+
+/* Insert values into Inquiry table */
+
+INSERT INTO Inquiry(customer_id, inquiry_type, inquiry_description)
+VALUES
+(1000, 'service', 'Do you provide home visits for dog grooming?'),
+(1001, 'vet', 'I want to change my vet.'),
+(1002, 'product', 'When will new dog collars be available?'),
+(1003, 'product', 'The water bowl I purchased is cracked. I want to return it.'),
+(1004, 'service', 'Do you accomodate lizards in your pet hostel.');
+
+/* Insert values into Employee_Phone table */
+
+INSERT INTO Employee_Phone(emp_id, phone_num)
+VALUES
+(5000, '0712345678'),
+(5001, '0719876543'),
+(5002, '0723456789'),
+(5003, '0734567890'),
+(5004, '0745678901');
+
+/* Insert values into Report table */
+
+INSERT INTO Report(report_type, report_date, metric_id, manager_id)
+VALUES
+('rev_report', '2024-09-03', 1, 5004),
+('usr_report', '2024-10-03', 2, 5004),
+('rev_report', '2024-11-03', 3, 5004),
+('rev_report', '2024-12-03', 1, 5004),
+('usr_report', '2025-01-03', 1, 5004);
+
+/* Insert values into Appointment table */
+
+INSERT INTO Appointment(customer_id, pet_id, service_id, appointment_date, appointment_time, checkin_date, checkout_date, vet_id, service_freq, postal_code, hostel_type, status)
+VALUES
+(1000, 1, 500, '2024-09-30', '10:30:00', NULL, NULL, NULL, NULL, '12345', NULL, 'pending'),  
+(1001, 2, 501, '2024-10-01', '09:00:00', NULL, NULL, NULL, 'Weekly', '23456', NULL, 'pending'),  
+(1002, 3, 503, '2024-10-02', '11:00:00', NULL, NULL, 5002, NULL, '34567', NULL, 'apporoved'),  
+(1003, 1, 502, '2024-10-05', '08:45:00', '2024-10-04', '2024-10-06', NULL, NULL, '45678', 'Standard', 'approved'),  
+(1004, 1, 500, '2024-10-30', '11:30:00', NULL, NULL, NULL, NULL, '12765', NULL, 'pending'); 

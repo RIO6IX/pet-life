@@ -1,0 +1,3 @@
+function accept(id) {
+    
+}

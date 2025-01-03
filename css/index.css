@@ -1,0 +1,78 @@
+body {
+    background-image: url("../assets/images/home_background.jpg");
+}
+
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn{
+    background-color: #333;
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.hero-image{
+    background-image: cover;
+    background-repeat: no-repeat;
+}
+
+.header-home{
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    color: #333;
+}
+
+h2{
+    text-align: center;
+    color: #333;
+}
+
+.service{
+    margin: 20px;
+    padding: 15px;
+    background-color: #d5d3d3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px hsl(160, 100%, 75%);
+}
+blockquote {
+    border-left: 4px solid #ccc;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+
+label {
+    margin: 10px 0 5px;
+}
+
+

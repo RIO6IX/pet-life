@@ -1,0 +1,74 @@
+
+body {
+    background-image: url(../../assets/images/petstore_background.jpg);
+}
+
+
+
+.content {
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.product-card {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgb(197, 196, 196);
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 350px;
+    padding: 15px;
+    margin: 50px 20px;
+    transition: 0.5s ease;
+    background-color: whitesmoke;
+}
+
+.product-link {
+    text-decoration: none;
+    color: black;
+}
+
+.product-card:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-name {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.product-rating {
+    font-size: 1.2rem;
+}
+
+.rating-yellow {
+    color: orange;
+}
+
+.add-to-cart-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.add-to-cart-btn:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}

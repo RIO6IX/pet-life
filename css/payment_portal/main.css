@@ -1,0 +1,53 @@
+/* Credit: w3schools website :- https://www.w3schools.com/howto/howto_js_accordion.asp*/
+
+.content {
+    margin-top: 150px;
+}
+
+.accordion {
+    background-color: #FFDBB5;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s ease;
+    font-size: 1.5rem;
+    border: 1px solid #e6933b;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.payment-form input{
+    font-size: 1.4rem;
+    padding: 5px;
+    margin: 10px;
+}
+
+.address-autofill-btn {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    background-color: #E85C0D;
+    color: white;
+    border: #ba4806;
+    border-radius: 5px;
+
+}

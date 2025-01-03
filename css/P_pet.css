@@ -1,0 +1,83 @@
+/* General Page Styling */
+body {
+    
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f4; 
+}
+
+
+
+/* Main Content Adjustment */
+#main {
+    transition: margin-left .3s; 
+    padding: 50px;
+}
+
+/* Title Section Styling */
+.title-section {
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.title-section h2 {
+    font-size: 24px; 
+}
+
+
+
+/*---------------- PET PROFILE ------------------ */
+
+/* Title Section Styling */
+.title-section {
+    text-align: center;
+    margin: 20px 0; 
+}
+/* Button to Add New Pet */
+.add-pet-btn {
+    display: block; 
+    margin: 20px auto; 
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Styling */
+.add-pet-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Pet Cards Section Styling */
+.pet-cards {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+/* Pet Card Styling */
+.pet-card {
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    text-align: center; 
+    padding: 10px; 
+}
+
+/* Pet Image Styling */
+.pet-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+
+
+
+

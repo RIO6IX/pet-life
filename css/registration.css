@@ -1,0 +1,97 @@
+/* Overall page container */
+.R-page-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #f0f4f8; 
+    height: 100vh;
+  }
+  
+  /* Logo styling */
+  .R-logo {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    width: 100px; 
+    height: auto;
+  }
+  
+  /* Form card container */
+  .R-card {
+    background-color: rgba(233, 203, 203, 0.829); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    padding: 40px; 
+    width: 400px; 
+  }
+  
+  /* Styling the fieldset */
+  .R-card fieldset {
+    border: none; 
+    padding: 0;
+  }
+  
+  /* Styling the legend */
+  .R-card legend {
+    background-color: #38168d;
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 24px; 
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Labels for the form */
+  .R-card label {
+    font-size: 16px; 
+    font-weight: bold; 
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Inputs and select fields */
+  .R-card input, 
+  .R-card textarea, 
+  .R-card select { 
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    border: 1px solid #200d66; 
+    font-size: 16px; 
+  }
+  
+  /* Textarea customization */
+  .R-card textarea {
+    height: 80px;
+    resize: vertical; 
+  }
+  
+  /* Button wrapper to center the button */
+  .R-button-wrapper {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  /* Submit button */
+  .R-card button {
+    background-color: #38168d; 
+    color: white; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    width: 100%; 
+  }
+  
+  /* Button hover effect */
+  .R-card button:hover {
+    background-color: #54329a; 
+  }
+  
